@@ -91,13 +91,13 @@ const Home = () => {
   return (
     <div className="text-slate-800">
       {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-br from-teal-50 to-blue-50 py-20 sm:py-24 lg:py-32 overflow-hidden">
+      <section id="hero" className="relative bg-gradient-to-br from-[#0B1220] to-[#10224E] py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-            Accelerate Your Clinical Trial Recruitment Success
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E8EEFC] leading-tight mb-6">
+            Recruit Qualified Subjects—Fast & Compliant
           </h1>
-          <p className="text-lg sm:text-xl text-slate-700 max-w-3xl mx-auto mb-10">
-            TRACS specializes in high-touch, human-first patient recruitment, delivering <span className="font-semibold text-teal-700">3x higher enrollment rates</span> and a <span className="font-semibold text-teal-700">50% reduction in screen failures</span>.
+          <p className="text-lg sm:text-xl text-[#A4B0CC] max-w-3xl mx-auto mb-10">
+            TRUST provides IRB-ready bilingual materials, nurse-led pre-screening, and targeted community outreach so Sponsors/CROs and Sites hit timelines without overloading coordinators.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -109,7 +109,7 @@ const Home = () => {
                   contactElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-teal-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-teal-700 transition-colors shadow-lg text-lg text-center"
+              className="bg-[#16B1F0] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg text-center"
             >
               I'm a Sponsor / CRO
             </a>
@@ -122,7 +122,7 @@ const Home = () => {
                   contactElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-white text-teal-600 border-2 border-teal-600 font-bold px-8 py-3 rounded-lg hover:bg-teal-50 transition-colors shadow-lg text-lg text-center"
+              className="bg-white text-[#10224E] border-2 border-[#10224E] font-bold px-8 py-3 rounded-lg hover:bg-[#56F0C8] hover:text-[#0B1220] transition-colors shadow-lg text-lg text-center"
             >
               I'm a Site / Vendor
             </a>
@@ -130,8 +130,8 @@ const Home = () => {
         </div>
         {/* Background elements for visual interest */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute w-64 h-64 bg-teal-200 rounded-full -top-20 -left-20 opacity-20"></div>
-          <div className="absolute w-96 h-96 bg-blue-200 rounded-full -bottom-40 -right-40 opacity-20"></div>
+          <div className="absolute w-64 h-64 bg-[#56F0C8] rounded-full -top-20 -left-20 opacity-10"></div>
+          <div className="absolute w-96 h-96 bg-[#16B1F0] rounded-full -bottom-40 -right-40 opacity-10"></div>
         </div>
       </section>
 
@@ -140,33 +140,33 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
-              We Solve the #1 Challenge in Clinical Trials:
+              Qualified subjects. Compliant process. Predictable timelines.
             </h2>
-            <p className="text-xl text-teal-700 font-semibold">
-              Finding and enrolling the right patients, faster.
+            <p className="text-xl text-[#10224E] font-semibold">
+              Nurse-led screening. IRB-ready materials. Faster FPI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6 bg-slate-50 rounded-xl shadow-md border border-slate-200">
+            <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
               <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Strategic "Boots-on-the-Ground" Outreach</h3>
-              <p className="text-slate-600">
-                Our teams engage directly with communities, building trust and identifying genuinely interested participants where they are.
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Bilingual Community Outreach</h3>
+              <p className="text-[#A4B0CC]">
+                Targeted community engagement with IRB-ready bilingual materials to identify qualified, pre-screened participants.
               </p>
             </div>
-            <div className="p-6 bg-slate-50 rounded-xl shadow-md border border-slate-200">
+            <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
               <div className="text-5xl mb-4">🩺</div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Rigorous Nurse-Led Pre-Screening</h3>
-              <p className="text-slate-600">
-                Licensed nurses meticulously pre-screen every lead against protocol criteria, drastically reducing screen failures.
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Nurse-Led Pre-Screening</h3>
+              <p className="text-[#A4B0CC]">
+                Licensed nurses conduct compliant pre-screening to ensure qualified subjects and predictable enrollment timelines.
               </p>
             </div>
-            <div className="p-6 bg-slate-50 rounded-xl shadow-md border border-slate-200">
+            <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
               <div className="text-5xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Complete Project Management</h3>
-              <p className="text-slate-600">
-                From IRB support to scheduling, we manage the entire recruitment process, freeing up your team's valuable time.
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">IRB-Ready Project Management</h3>
+              <p className="text-[#A4B0CC]">
+                Complete IRB documentation support and project management to accelerate FPI and maintain compliant processes.
               </p>
             </div>
           </div>
@@ -174,170 +174,170 @@ const Home = () => {
       </section>
 
       {/* Our Services Section */}
-      <section id="services" className="py-16 sm:py-20 bg-slate-50">
+      <section id="services" className="py-16 sm:py-20 bg-[#A4B0CC]/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1220] mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-slate-600">
-              Comprehensive patient recruitment solutions tailored to your study needs
+            <p className="text-xl text-[#10224E]">
+              Comprehensive recruitment solutions for qualified, compliant enrollment
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Marketing & Materials */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg border border-purple-200">
+            <div className="bg-gradient-to-br from-[#56F0C8]/10 to-[#16B1F0]/10 p-8 rounded-2xl shadow-lg border border-[#56F0C8]/20">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-[#16B1F0] rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">📢</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Marketing & Materials</h3>
+                <h3 className="text-2xl font-bold text-[#0B1220]">IRB-Ready Bilingual Materials</h3>
               </div>
-              <p className="text-slate-700 mb-6 text-lg">
-                Professional, study-specific marketing materials designed to capture attention and drive engagement.
+              <p className="text-[#10224E] mb-6 text-lg">
+                Compliant, study-specific materials designed for qualified participant engagement and predictable enrollment.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Custom promotional materials
+                  Bilingual promotional materials
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Professional flyers & brochures
+                  IRB-approved flyers & brochures
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Study-specific folders & handouts
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Branded recruitment materials
+                  Compliant recruitment materials
                 </li>
               </ul>
             </div>
 
             {/* Digital Presence */}
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl shadow-lg border border-teal-200">
+            <div className="bg-gradient-to-br from-[#56F0C8]/10 to-[#16B1F0]/10 p-8 rounded-2xl shadow-lg border border-[#56F0C8]/20">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-[#16B1F0] rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">🌐</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Digital Presence</h3>
+                <h3 className="text-2xl font-bold text-[#0B1220]">Digital Presence</h3>
               </div>
-              <p className="text-slate-700 mb-6 text-lg">
-                Professional landing pages and digital platforms to capture interest and facilitate referrals.
+              <p className="text-[#10224E] mb-6 text-lg">
+                Compliant digital platforms designed for qualified participant capture and predictable enrollment tracking.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-teal-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Custom landing page websites
+                  IRB-compliant landing pages
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-teal-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Interest capture forms
+                  Qualified participant forms
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-teal-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Referral tracking systems
+                  Pre-screening tracking systems
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-teal-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Mobile-optimized design
+                  Mobile-optimized compliance
                 </li>
               </ul>
             </div>
 
             {/* Community Outreach */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border border-orange-200">
+            <div className="bg-gradient-to-br from-[#56F0C8]/10 to-[#16B1F0]/10 p-8 rounded-2xl shadow-lg border border-[#56F0C8]/20">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-[#16B1F0] rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">👥</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Community Outreach</h3>
+                <h3 className="text-2xl font-bold text-[#0B1220]">Bilingual Community Outreach</h3>
               </div>
-              <p className="text-slate-700 mb-6 text-lg">
-                Boots-on-the-ground approach targeting high-traffic locations and community hubs.
+              <p className="text-[#10224E] mb-6 text-lg">
+                Targeted community engagement with qualified participant identification and compliant outreach processes.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-orange-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   High-traffic location visits
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-orange-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Major landmark engagement
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-orange-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Community event participation
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-orange-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Direct patient engagement
+                  Direct qualified participant engagement
                 </li>
               </ul>
             </div>
 
             {/* Clinical Support */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg border border-green-200">
+            <div className="bg-gradient-to-br from-[#56F0C8]/10 to-[#16B1F0]/10 p-8 rounded-2xl shadow-lg border border-[#56F0C8]/20">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-[#16B1F0] rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white text-xl">🩺</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Clinical Support</h3>
+                <h3 className="text-2xl font-bold text-[#0B1220]">Nurse-Led Clinical Support</h3>
               </div>
-              <p className="text-slate-700 mb-6 text-lg">
-                Licensed nurse pre-screening and dedicated project management to ensure study success.
+              <p className="text-[#10224E] mb-6 text-lg">
+                Licensed nurse pre-screening and dedicated project management to ensure qualified enrollment and predictable timelines.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Licensed nurse pre-screening
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Eligibility verification
+                  Qualified subject verification
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Dedicated project manager
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-center text-[#10224E]">
+                  <svg className="w-5 h-5 text-[#16B1F0] mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  KPI monitoring & reporting
+                  Predictable timeline monitoring
                 </li>
               </ul>
             </div>
@@ -345,10 +345,10 @@ const Home = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+            <h3 className="text-2xl font-bold text-[#0B1220] mb-4">
               Ready to accelerate your study enrollment?
             </h3>
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-[#10224E] mb-8">
               Let's discuss how our comprehensive services can meet your specific study requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,7 +361,7 @@ const Home = () => {
                     contactElement.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-teal-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-teal-700 transition-colors shadow-lg text-lg text-center"
+                className="bg-[#16B1F0] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg text-center"
               >
                 I'm a Sponsor / CRO
               </a>
@@ -374,7 +374,7 @@ const Home = () => {
                     contactElement.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-white text-teal-600 border-2 border-teal-600 font-bold px-8 py-3 rounded-lg hover:bg-teal-50 transition-colors shadow-lg text-lg text-center"
+                className="bg-white text-[#10224E] border-2 border-[#10224E] font-bold px-8 py-3 rounded-lg hover:bg-[#56F0C8] hover:text-[#0B1220] transition-colors shadow-lg text-lg text-center"
               >
                 I'm a Site / Vendor
               </a>
@@ -437,13 +437,13 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact-form-section" className="py-16 sm:py-20 bg-slate-50">
+      <section id="contact-form-section" className="py-16 sm:py-20 bg-[#A4B0CC]/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1220] mb-4">
               Ready to Accelerate Your Recruitment?
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-[#10224E]">
               Get a personalized proposal tailored to your specific needs and challenges.
             </p>
           </div>
@@ -580,7 +580,7 @@ const Home = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white font-bold py-4 rounded-lg hover:bg-teal-700 transition-colors text-lg"
+                  className="w-full bg-[#16B1F0] text-white font-bold py-4 rounded-lg hover:bg-[#10224E] transition-colors text-lg"
                 >
                   Request My Proposal
                 </button>

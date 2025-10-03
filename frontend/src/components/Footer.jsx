@@ -7,7 +7,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: Contact Info */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-white">TRACS</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">TRUST</h4>
             <p className="text-slate-400 text-sm">
               123 University Heights Dr<br />
               Newark, NJ 07102<br />
@@ -15,7 +15,7 @@ function Footer() {
             </p>
             <p className="text-slate-400 text-sm mt-4">
               P: (973) 555-1234<br />
-              E: <a href="mailto:contact@tracs-recruitment.com" className="hover:text-teal-400">contact@tracs-recruitment.com</a>
+              E: <a href="mailto:contact@trust-recruitment.com" className="hover:text-[#56F0C8]">contact@trust-recruitment.com</a>
             </p>
           </div>
           {/* Column 2: Quick Links */}
@@ -53,7 +53,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-slate-700 pt-8 text-center text-slate-400 text-sm">
-          <p>&copy; 2025 TRACS - Trial Recruitment and Clinical Services. All Rights Reserved. <span className="mx-2">|</span> <a href="#" className="hover:text-white">Privacy Policy</a> <span className="mx-2">|</span> <a href="#" className="hover:text-white">Terms of Service</a></p>
+          <p>&copy; 2025 TRUST - Trial Recruitment & Unified Subject Services. All Rights Reserved. <span className="mx-2">|</span> <a href="#" className="hover:text-white">Privacy Policy</a> <span className="mx-2">|</span> <a href="#" className="hover:text-white">Terms of Service</a></p>
         </div>
       </div>
     </footer>

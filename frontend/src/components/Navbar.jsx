@@ -19,13 +19,13 @@ const Navbar = () => {
     
     if (isActive(path)) {
       return isPrimary 
-        ? `${baseStyles} bg-teal-700 text-white` 
-        : `${baseStyles} bg-teal-100 text-teal-800 border-2 border-teal-600`;
+        ? `${baseStyles} bg-[#10224E] text-[#E8EEFC]` 
+        : `${baseStyles} bg-[#56F0C8] text-[#0B1220] border-2 border-[#56F0C8]`;
     }
     
     return isPrimary
-      ? `${baseStyles} bg-teal-600 text-white hover:bg-teal-700`
-      : `${baseStyles} bg-white text-teal-600 border border-teal-600 hover:bg-teal-50`;
+      ? `${baseStyles} bg-[#16B1F0] text-white hover:bg-[#10224E]`
+      : `${baseStyles} bg-white text-[#10224E] border border-[#10224E] hover:bg-[#56F0C8] hover:text-[#0B1220]`;
   };
 
   return (
@@ -35,10 +35,10 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link 
               to="/" 
-              className="text-xl font-bold text-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 rounded-md px-2 py-1"
-              aria-label="TRACS - Go to homepage"
+              className="text-xl font-bold text-[#56F0C8] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2 rounded-md px-2 py-1"
+              aria-label="TRUST - Go to homepage"
             >
-              TRACS
+              TRUST
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -78,7 +78,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/#contact" 
-                className={`${getButtonStyles('/#contact', true)} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+                className={`${getButtonStyles('/#contact', true)} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
                 role="menuitem"
                 aria-label="Request a proposal"
               >
@@ -130,7 +130,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-200">
             <Link 
               to="/" 
-              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/') ? 'bg-teal-100 text-teal-800' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
               onClick={() => setIsMobileMenuOpen(false)}
               role="menuitem"
               aria-label="Go to Home page"
@@ -139,7 +139,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/about" 
-              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/about') ? 'bg-teal-100 text-teal-800' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/about') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
               onClick={() => setIsMobileMenuOpen(false)}
               role="menuitem"
               aria-label="Go to About Us page"
@@ -148,7 +148,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/sponsor" 
-              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/sponsor') ? 'bg-teal-100 text-teal-800' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/sponsor') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
               onClick={() => setIsMobileMenuOpen(false)}
               role="menuitem"
               aria-label="Go to Sponsor / CRO page"
@@ -157,7 +157,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/site" 
-              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/site') ? 'bg-teal-100 text-teal-800' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+              className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/site') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
               onClick={() => setIsMobileMenuOpen(false)}
               role="menuitem"
               aria-label="Go to Sites / Vendors page"
@@ -166,7 +166,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/#contact" 
-              className="block px-3 py-2 rounded-md text-base font-medium bg-teal-600 text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+              className="block px-3 py-2 rounded-md text-base font-medium bg-[#16B1F0] text-white hover:bg-[#10224E] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2"
               onClick={(e) => {
                 e.preventDefault();
                 setIsMobileMenuOpen(false);

@@ -25,13 +25,13 @@ const About = () => {
   return (
     <div className="text-slate-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-50 to-blue-50 py-20 sm:py-24 lg:py-32">
+      <section className="bg-gradient-to-br from-[#0B1220] to-[#10224E] py-20 sm:py-24 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-            About TRACS
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E8EEFC] leading-tight mb-6">
+            About TRUST
           </h1>
-          <p className="text-lg sm:text-xl text-slate-700 max-w-3xl mx-auto mb-10">
-            We're revolutionizing clinical trial recruitment through human-first approaches and proven methodologies.
+          <p className="text-lg sm:text-xl text-[#A4B0CC] max-w-3xl mx-auto mb-10">
+            TRUST (Trial Recruitment & Unified Subject Services) is a clinical recruitment partner focused on qualified, compliant, and predictable enrollment.
           </p>
         </div>
       </section>
@@ -45,50 +45,50 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-slate-700 mb-6">
-                To accelerate clinical trial success by connecting the right patients with the right studies through innovative, human-centered recruitment strategies.
+                We combine IRB-ready bilingual materials, boots-on-the-ground outreach, and nurse-led pre-screening to reduce screen failures and coordinator burden, accelerating first-patient-in and keeping trials on schedule.
               </p>
               <p className="text-lg text-slate-700 mb-8">
-                We believe that every patient deserves access to potentially life-changing treatments, and every study deserves the participants it needs to succeed.
+                Our focus is on qualified, compliant, and predictable enrollment that delivers results you can trust.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-teal-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
+                    <span className="text-[#0B1220] font-bold">✓</span>
                   </div>
-                  <span className="text-slate-700 font-medium">Human-first approach to patient engagement</span>
+                  <span className="text-slate-700 font-medium">Qualified, pre-screened participants</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-teal-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
+                    <span className="text-[#0B1220] font-bold">✓</span>
                   </div>
-                  <span className="text-slate-700 font-medium">Evidence-based recruitment strategies</span>
+                  <span className="text-slate-700 font-medium">Compliant, IRB-ready processes</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-teal-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
+                    <span className="text-[#0B1220] font-bold">✓</span>
                   </div>
-                  <span className="text-slate-700 font-medium">Comprehensive project management</span>
+                  <span className="text-slate-700 font-medium">Predictable enrollment timelines</span>
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Choose TRACS?</h3>
+            <div className="bg-gradient-to-br from-[#56F0C8]/10 to-[#16B1F0]/10 p-8 rounded-2xl border border-[#56F0C8]/20">
+              <h3 className="text-2xl font-bold text-[#0B1220] mb-4">Why Choose TRUST?</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span className="text-slate-700">Proven track record of 3x higher enrollment rates</span>
+                  <span className="text-[#16B1F0] font-bold mr-3">•</span>
+                  <span className="text-[#10224E]">Qualified, pre-screened participants</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span className="text-slate-700">Licensed nurse pre-screening reduces screen failures by 50%</span>
+                  <span className="text-[#16B1F0] font-bold mr-3">•</span>
+                  <span className="text-[#10224E]">Compliant, IRB-ready bilingual materials</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span className="text-slate-700">Complete project management from start to finish</span>
+                  <span className="text-[#16B1F0] font-bold mr-3">•</span>
+                  <span className="text-[#10224E]">Nurse-led pre-screening reduces screen failures</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-teal-600 font-bold mr-3">•</span>
-                  <span className="text-slate-700">Customized approach for each study's unique needs</span>
+                  <span className="text-[#16B1F0] font-bold mr-3">•</span>
+                  <span className="text-[#10224E]">Predictable enrollment timelines</span>
                 </li>
               </ul>
             </div>
