@@ -8,6 +8,7 @@ const Home = () => {
   const [showForm, setShowForm] = useState(false);
   const [formType, setFormType] = useState('sponsor');
   const [successEmail, setSuccessEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const beforeData = {
     labels: ['Unqualified Leads', 'Contacted but Lost', 'Enrolled'],
@@ -64,6 +65,19 @@ const Home = () => {
   const handleFormSuccess = (email) => {
     setSuccessEmail(email);
     setShowForm(false);
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission delay
+    setTimeout(() => {
+      const formData = new FormData(e.target);
+      const email = formData.get('email');
+      setSuccessEmail(email);
+      setIsSubmitting(false);
+    }, 1500);
   };
 
   // Handle scroll to contact section when URL hash is #contact
@@ -452,11 +466,11 @@ const Home = () => {
             <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
               <div className="text-green-600 text-6xl mb-4">✓</div>
               <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
-              <p className="text-green-700 text-lg">
-                We've sent a verification email to <strong>{successEmail}</strong>
+              <p className="text-green-700 text-lg mb-4">
+                Your proposal request has been successfully submitted.
               </p>
-              <p className="text-green-600 mt-2">
-                Please check your email and click the link to access your personalized proposal.
+              <p className="text-green-600 text-base">
+                A team member will get back to you shortly at <strong>{successEmail}</strong> with your personalized proposal.
               </p>
             </div>
           ) : (
@@ -470,7 +484,7 @@ const Home = () => {
                 </p>
               </div>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleFormSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-2">
@@ -580,9 +594,14 @@ const Home = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-[#16B1F0] text-white font-bold py-4 rounded-lg hover:bg-[#10224E] transition-colors text-lg"
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-4 rounded-lg transition-colors text-lg ${
+                    isSubmitting 
+                      ? 'bg-[#A4B0CC] text-[#10224E] cursor-not-allowed' 
+                      : 'bg-[#16B1F0] text-white hover:bg-[#10224E]'
+                  }`}
                 >
-                  Request My Proposal
+                  {isSubmitting ? 'Submitting...' : 'Request My Proposal'}
                 </button>
               </form>
             </div>
