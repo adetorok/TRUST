@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import RoleSelectionModal from '../components/RoleSelectionModal';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -9,6 +10,7 @@ const Home = () => {
   const [formType, setFormType] = useState('sponsor');
   const [successEmail, setSuccessEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showRoleModal, setShowRoleModal] = useState(false);
 
   const beforeData = {
     labels: ['Unqualified Leads', 'Contacted but Lost', 'Enrolled'],
@@ -49,18 +51,6 @@ const Home = () => {
     }
   };
 
-  const handleRequestProposalClick = (type) => {
-    setFormType(type);
-    setShowForm(true);
-    setSuccessEmail(''); // Clear previous success message
-    // Scroll to the form
-    setTimeout(() => {
-      const formElement = document.getElementById('contact-form-section');
-      if (formElement) {
-        formElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  };
 
   const handleFormSuccess = (email) => {
     setSuccessEmail(email);
@@ -78,6 +68,24 @@ const Home = () => {
       setSuccessEmail(email);
       setIsSubmitting(false);
     }, 1500);
+  };
+
+  const handleRequestProposalClick = (e) => {
+    e.preventDefault();
+    setShowRoleModal(true);
+  };
+
+  const handleRoleSelect = (role) => {
+    setFormType(role);
+    setShowForm(true);
+    setSuccessEmail('');
+    // Scroll to the form section
+    setTimeout(() => {
+      const contactElement = document.getElementById('contact-form-section');
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   // Handle scroll to contact section when URL hash is #contact
@@ -104,6 +112,11 @@ const Home = () => {
 
   return (
     <div className="text-slate-800">
+      <RoleSelectionModal
+        isOpen={showRoleModal}
+        onClose={() => setShowRoleModal(false)}
+        onRoleSelect={handleRoleSelect}
+      />
       {/* Hero Section */}
       <section id="hero" className="relative bg-gradient-to-br from-[#0B1220] to-[#10224E] py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -114,32 +127,12 @@ const Home = () => {
             TRUST provides IRB-ready bilingual materials, nurse-led pre-screening, and targeted community outreach so Sponsors/CROs and Sites hit timelines without overloading coordinators.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact-form-section"
-              onClick={(e) => {
-                e.preventDefault();
-                const contactElement = document.getElementById('contact-form-section');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+            <button
+              onClick={handleRequestProposalClick}
               className="bg-[#16B1F0] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg text-center"
             >
-              I'm a Sponsor / CRO
-            </a>
-            <a
-              href="#contact-form-section"
-              onClick={(e) => {
-                e.preventDefault();
-                const contactElement = document.getElementById('contact-form-section');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="bg-white text-[#10224E] border-2 border-[#10224E] font-bold px-8 py-3 rounded-lg hover:bg-[#56F0C8] hover:text-[#0B1220] transition-colors shadow-lg text-lg text-center"
-            >
-              I'm a Site / Vendor
-            </a>
+              Request Proposal
+            </button>
           </div>
         </div>
         {/* Background elements for visual interest */}
@@ -365,33 +358,13 @@ const Home = () => {
             <p className="text-lg text-[#10224E] mb-8">
               Let's discuss how our comprehensive services can meet your specific study requirements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact-form-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactElement = document.getElementById('contact-form-section');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+            <div className="flex justify-center">
+              <button
+                onClick={handleRequestProposalClick}
                 className="bg-[#16B1F0] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg text-center"
               >
-                I'm a Sponsor / CRO
-              </a>
-              <a
-                href="#contact-form-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactElement = document.getElementById('contact-form-section');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-white text-[#10224E] border-2 border-[#10224E] font-bold px-8 py-3 rounded-lg hover:bg-[#56F0C8] hover:text-[#0B1220] transition-colors shadow-lg text-lg text-center"
-              >
-                I'm a Site / Vendor
-              </a>
+                Request Proposal
+              </button>
             </div>
           </div>
         </div>
@@ -462,7 +435,22 @@ const Home = () => {
             </p>
           </div>
 
-          {successEmail ? (
+          {!showForm ? (
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-[#0B1220] mb-4">
+                Ready to Accelerate Your Recruitment?
+              </h3>
+              <p className="text-lg text-[#10224E] mb-8">
+                Get a personalized proposal tailored to your specific needs and challenges.
+              </p>
+              <button
+                onClick={handleRequestProposalClick}
+                className="bg-[#16B1F0] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg"
+              >
+                Request Your Proposal
+              </button>
+            </div>
+          ) : successEmail ? (
             <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
               <div className="text-green-600 text-6xl mb-4">✓</div>
               <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>

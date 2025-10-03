@@ -1,10 +1,17 @@
 import { useState } from 'react';
+import RoleSelectionModal from '../components/RoleSelectionModal';
 
 const SponsorLanding = () => {
   const [showForm, setShowForm] = useState(false);
   const [successEmail, setSuccessEmail] = useState('');
+  const [showRoleModal, setShowRoleModal] = useState(false);
 
-  const handleRequestProposalClick = () => {
+  const handleRequestProposalClick = (e) => {
+    e.preventDefault();
+    setShowRoleModal(true);
+  };
+
+  const handleRoleSelect = (role) => {
     setShowForm(true);
     setSuccessEmail('');
     setTimeout(() => {
@@ -22,6 +29,11 @@ const SponsorLanding = () => {
 
   return (
     <div className="text-slate-800">
+      <RoleSelectionModal
+        isOpen={showRoleModal}
+        onClose={() => setShowRoleModal(false)}
+        onRoleSelect={handleRoleSelect}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-50 to-blue-50 py-20 sm:py-24 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -31,19 +43,12 @@ const SponsorLanding = () => {
           <p className="text-lg sm:text-xl text-slate-700 max-w-3xl mx-auto mb-10">
             Accelerate your clinical trial enrollment with our proven patient recruitment strategies designed specifically for sponsors and CROs.
           </p>
-          <a
-            href="#contact-form-section"
-            onClick={(e) => {
-              e.preventDefault();
-              const contactElement = document.getElementById('contact-form-section');
-              if (contactElement) {
-                contactElement.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="bg-teal-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-teal-700 transition-colors shadow-lg text-lg text-center inline-block"
+          <button
+            onClick={handleRequestProposalClick}
+            className="bg-[#16B1F0] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg text-center"
           >
             Request Your Proposal
-          </a>
+          </button>
         </div>
       </section>
 
@@ -264,19 +269,12 @@ const SponsorLanding = () => {
               <p className="text-lg text-slate-600 mb-8">
                 Ready to accelerate your study enrollment?
               </p>
-              <a
-                href="#contact-form-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactElement = document.getElementById('contact-form-section');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-teal-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-teal-700 transition-colors shadow-lg text-lg text-center inline-block"
+              <button
+                onClick={handleRequestProposalClick}
+                className="bg-[#16B1F0] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg text-center"
               >
                 Request Your Proposal
-              </a>
+              </button>
             </div>
           )}
         </div>

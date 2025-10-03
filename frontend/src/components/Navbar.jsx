@@ -1,9 +1,22 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import RoleSelectionModal from './RoleSelectionModal';
 
 const Navbar = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showRoleModal, setShowRoleModal] = useState(false);
+
+  const handleRequestProposalClick = (e) => {
+    e.preventDefault();
+    setShowRoleModal(true);
+  };
+
+  const handleRoleSelect = (role) => {
+    setShowRoleModal(false);
+    // Navigate to home page and scroll to form
+    window.location.href = '/#contact-form-section';
+  };
 
   // Helper function to check if a path is active
   const isActive = (path) => {
@@ -29,7 +42,13 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50" role="banner">
+    <>
+      <RoleSelectionModal
+        isOpen={showRoleModal}
+        onClose={() => setShowRoleModal(false)}
+        onRoleSelect={handleRoleSelect}
+      />
+      <header className="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50" role="banner">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -76,14 +95,14 @@ const Navbar = () => {
               >
                 Sites / Vendors
               </Link>
-              <Link 
-                to="/#contact" 
+              <button
+                onClick={handleRequestProposalClick}
                 className={`${getButtonStyles('/#contact', true)} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
                 role="menuitem"
                 aria-label="Request a proposal"
               >
                 Request Proposal
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -164,26 +183,23 @@ const Navbar = () => {
             >
               Sites / Vendors
             </Link>
-            <Link 
-              to="/#contact" 
-              className="block px-3 py-2 rounded-md text-base font-medium bg-[#16B1F0] text-white hover:bg-[#10224E] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2"
+            <button
               onClick={(e) => {
                 e.preventDefault();
                 setIsMobileMenuOpen(false);
-                const contactElement = document.getElementById('contact');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
+                handleRequestProposalClick(e);
               }}
+              className="block px-3 py-2 rounded-md text-base font-medium bg-[#16B1F0] text-white hover:bg-[#10224E] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2"
               role="menuitem"
               aria-label="Request a proposal"
             >
               Request Proposal
-            </Link>
+            </button>
           </div>
         </div>
       )}
     </header>
+    </>
   );
 };
 

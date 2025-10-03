@@ -1,12 +1,19 @@
 import { useState } from 'react';
+import RoleSelectionModal from '../components/RoleSelectionModal';
 
 const About = () => {
   const [showForm, setShowForm] = useState(false);
   const [formType, setFormType] = useState('sponsor');
   const [successEmail, setSuccessEmail] = useState('');
+  const [showRoleModal, setShowRoleModal] = useState(false);
 
-  const handleRequestProposalClick = (type) => {
-    setFormType(type);
+  const handleRequestProposalClick = (e) => {
+    e.preventDefault();
+    setShowRoleModal(true);
+  };
+
+  const handleRoleSelect = (role) => {
+    setFormType(role);
     setShowForm(true);
     setSuccessEmail('');
     setTimeout(() => {
@@ -24,6 +31,11 @@ const About = () => {
 
   return (
     <div className="text-slate-800">
+      <RoleSelectionModal
+        isOpen={showRoleModal}
+        onClose={() => setShowRoleModal(false)}
+        onRoleSelect={handleRoleSelect}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#0B1220] to-[#10224E] py-20 sm:py-24 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -272,33 +284,13 @@ const About = () => {
               <p className="text-lg text-slate-600 mb-8">
                 Choose your role to get started with a personalized proposal
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#contact-form-section"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const contactElement = document.getElementById('contact-form-section');
-                    if (contactElement) {
-                      contactElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                  className="bg-teal-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-teal-700 transition-colors shadow-lg text-lg text-center"
+              <div className="flex justify-center">
+                <button
+                  onClick={handleRequestProposalClick}
+                  className="bg-[#16B1F0] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#10224E] transition-colors shadow-lg text-lg"
                 >
-                  I'm a Sponsor / CRO
-                </a>
-                <a
-                  href="#contact-form-section"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const contactElement = document.getElementById('contact-form-section');
-                    if (contactElement) {
-                      contactElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                  className="bg-white text-teal-600 border-2 border-teal-600 font-bold px-8 py-4 rounded-lg hover:bg-teal-50 transition-colors shadow-lg text-lg text-center"
-                >
-                  I'm a Site / Vendor
-                </a>
+                  Request Proposal
+                </button>
               </div>
             </div>
           )}
