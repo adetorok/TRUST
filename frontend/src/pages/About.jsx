@@ -43,7 +43,7 @@ const About = () => {
             About TRUST
           </h1>
           <p className="text-lg sm:text-xl text-[#A4B0CC] max-w-3xl mx-auto mb-10">
-            TRUST (Trial Recruitment & Unified Subject Services) is a clinical recruitment partner focused on qualified, compliant, and predictable enrollment.
+            TRUST recruits qualified subjects so sites and sponsors hit enrollment targets—fast and predictably. We combine community outreach and nurse-led pre-screening to reduce screen fails and coordinator burden.
           </p>
         </div>
       </section>
@@ -57,29 +57,35 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-slate-700 mb-6">
-                We combine IRB-ready bilingual materials, boots-on-the-ground outreach, and nurse-led pre-screening to reduce screen failures and coordinator burden, accelerating first-patient-in and keeping trials on schedule.
+                TRUST's primary objective is enrollment. We deliver qualified, pre-screened subjects so your site meets accrual targets on time. We achieve this through targeted community outreach and nurse-led pre-screening that reduce screen fails and coordinator workload.
               </p>
               <p className="text-lg text-slate-700 mb-8">
-                Our focus is on qualified, compliant, and predictable enrollment that delivers results you can trust.
+                IRB-ready bilingual (EN/ES) materials and HIPAA-aware processes support compliance while keeping recruitment moving.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
                     <span className="text-[#0B1220] font-bold">✓</span>
                   </div>
-                  <span className="text-slate-700 font-medium">Qualified, pre-screened participants</span>
+                  <span className="text-slate-700 font-medium">Meet or exceed enrollment targets for the contracted study(ies)</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
                     <span className="text-[#0B1220] font-bold">✓</span>
                   </div>
-                  <span className="text-slate-700 font-medium">Compliant, IRB-ready processes</span>
+                  <span className="text-slate-700 font-medium">Improve referral quality via nurse-led inclusion/exclusion pre-screening</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
                     <span className="text-[#0B1220] font-bold">✓</span>
                   </div>
-                  <span className="text-slate-700 font-medium">Predictable enrollment timelines</span>
+                  <span className="text-slate-700 font-medium">Lower site burden by shifting outreach and pre-screen to TRUST</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-[#56F0C8] rounded-full flex items-center justify-center mr-4">
+                    <span className="text-[#0B1220] font-bold">✓</span>
+                  </div>
+                  <span className="text-slate-700 font-medium">Maintain compliance (IRB/ICH-GCP aligned; HIPAA-aware) without slowing recruitment</span>
                 </div>
               </div>
             </div>

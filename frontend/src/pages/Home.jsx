@@ -121,11 +121,25 @@ const Home = () => {
       <section id="hero" className="relative bg-gradient-to-br from-[#0B1220] to-[#10224E] py-20 sm:py-24 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E8EEFC] leading-tight mb-6">
-            Recruit Qualified Subjects—Fast & Compliant
+            Recruit Qualified Subjects—Fast & Predictable
           </h1>
           <p className="text-lg sm:text-xl text-[#A4B0CC] max-w-3xl mx-auto mb-10">
-            TRUST provides IRB-ready bilingual materials, nurse-led pre-screening, and targeted community outreach so Sponsors/CROs and Sites hit timelines without overloading coordinators.
+            TRUST builds a steady pipeline of pre-qualified subjects so your study meets enrollment targets. Our method blends targeted community outreach with nurse-led pre-screening to cut screen-fail rates and keep coordinators focused on visits. (IRB-ready bilingual materials included.)
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <span className="bg-[#56F0C8] text-[#0B1220] px-4 py-2 rounded-full text-sm font-semibold">
+              Enrollment-focused
+            </span>
+            <span className="bg-[#16B1F0] text-white px-4 py-2 rounded-full text-sm font-semibold">
+              Nurse-led pre-screen
+            </span>
+            <span className="bg-[#10224E] text-[#E8EEFC] px-4 py-2 rounded-full text-sm font-semibold">
+              EN/ES
+            </span>
+            <span className="bg-[#56F0C8] text-[#0B1220] px-4 py-2 rounded-full text-sm font-semibold">
+              IRB/ICH-GCP aligned
+            </span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleRequestProposalClick}
@@ -147,41 +161,101 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
-              Qualified subjects. Compliant process. Predictable timelines.
+              TRUST recruits qualified subjects so sites and sponsors hit enrollment targets—fast and predictably.
             </h2>
             <p className="text-xl text-[#10224E] font-semibold">
-              Nurse-led screening. IRB-ready materials. Faster FPI.
+              We combine community outreach and nurse-led pre-screening to reduce screen fails and coordinator burden.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
             <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Bilingual Community Outreach</h3>
+              <div className="text-5xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Enrollment First</h3>
               <p className="text-[#A4B0CC]">
-                Targeted community engagement with IRB-ready bilingual materials to identify qualified, pre-screened participants.
+                Our north star is meeting your enrollment plan—not just generating clicks or inquiries.
               </p>
             </div>
             <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
-              <div className="text-5xl mb-4">🩺</div>
-              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Nurse-Led Pre-Screening</h3>
+              <div className="text-5xl mb-4">⭐</div>
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Quality Over Volume</h3>
               <p className="text-[#A4B0CC]">
-                Licensed nurses conduct compliant pre-screening to ensure qualified subjects and predictable enrollment timelines.
+                Nurse-led pre-screening delivers eligible, engaged referrals to your site.
               </p>
             </div>
             <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
-              <div className="text-5xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">IRB-Ready Project Management</h3>
+              <div className="text-5xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Predictable Pipeline</h3>
               <p className="text-[#A4B0CC]">
-                Complete IRB documentation support and project management to accelerate FPI and maintain compliant processes.
+                Weekly outputs, transparent reporting, and fast iteration for steady accrual.
+              </p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
+              <div className="text-5xl mb-4">👥</div>
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Coordinator Relief</h3>
+              <p className="text-[#A4B0CC]">
+                We handle outreach and pre-screen so your team can run visits.
+              </p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-[#10224E] to-[#0B1220] rounded-xl shadow-md text-white">
+              <div className="text-5xl mb-4">✅</div>
+              <h3 className="text-xl font-bold text-[#E8EEFC] mb-2">Compliant by Design</h3>
+              <p className="text-[#A4B0CC]">
+                IRB-ready EN/ES materials and HIPAA-aware operations—without slowing recruitment.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Why It Works Section */}
+      <section id="why-it-works" className="py-16 sm:py-20 bg-[#A4B0CC]/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1220] mb-4">
+              Why It Works
+            </h2>
+            <p className="text-xl text-[#10224E]">
+              The difference between online-only and TRUST approach
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="p-6 bg-white rounded-xl shadow-md border border-red-200">
+                <h3 className="text-2xl font-bold text-red-700 mb-3">Online-only approach:</h3>
+                <p className="text-slate-700 text-lg">
+                  Low-intent clicks → no-shows → high screen-fail
+                </p>
+              </div>
+              <div className="p-6 bg-white rounded-xl shadow-md border border-teal-200">
+                <h3 className="text-2xl font-bold text-teal-700 mb-3">TRUST approach:</h3>
+                <p className="text-slate-700 text-lg mb-4">
+                  In-person community outreach finds motivated candidates; nurse pre-screen filters for eligibility; sites receive ready-to-schedule referrals.
+                </p>
+                <p className="text-slate-700 font-semibold">
+                  Result: faster FPI and steadier accrual.
+                </p>
+              </div>
+            </div>
+            <div className="relative h-80 w-full">
+              <img
+                src="https://via.placeholder.com/600x400" // Placeholder image
+                alt="Why TRUST Works"
+                className="rounded-xl shadow-lg object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent rounded-xl flex items-end p-6">
+                <p className="text-white text-xl font-semibold">
+                  Proven methodology for enrollment success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Services Section */}
-      <section id="services" className="py-16 sm:py-20 bg-[#A4B0CC]/10">
+      <section id="services" className="py-16 sm:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1220] mb-4">
