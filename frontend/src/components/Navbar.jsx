@@ -18,6 +18,15 @@ const Navbar = () => {
     window.location.href = '/#contact-form-section';
   };
 
+  const handleNavClick = (path) => {
+    // Scroll to top when clicking on any nav link
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
   // Helper function to check if a path is active
   const isActive = (path) => {
     if (path === '/') {
@@ -65,7 +74,8 @@ const Navbar = () => {
             <div className="ml-10 flex items-center space-x-2" role="menubar">
               <Link 
                 to="/" 
-                className={`${getButtonStyles('/')} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+                onClick={() => handleNavClick('/')}
+                className={`${getButtonStyles('/')} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
                 role="menuitem"
                 aria-label="Go to Home page"
               >
@@ -73,7 +83,8 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/about" 
-                className={`${getButtonStyles('/about')} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+                onClick={() => handleNavClick('/about')}
+                className={`${getButtonStyles('/about')} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
                 role="menuitem"
                 aria-label="Go to About Us page"
               >
@@ -81,7 +92,8 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/sponsor" 
-                className={`${getButtonStyles('/sponsor')} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+                onClick={() => handleNavClick('/sponsor')}
+                className={`${getButtonStyles('/sponsor')} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
                 role="menuitem"
                 aria-label="Go to Sponsor / CRO page"
               >
@@ -89,7 +101,8 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/site" 
-                className={`${getButtonStyles('/site')} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
+                onClick={() => handleNavClick('/site')}
+                className={`${getButtonStyles('/site')} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
                 role="menuitem"
                 aria-label="Go to Sites / Vendors page"
               >
@@ -150,7 +163,10 @@ const Navbar = () => {
             <Link 
               to="/" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleNavClick('/');
+              }}
               role="menuitem"
               aria-label="Go to Home page"
             >
@@ -159,7 +175,10 @@ const Navbar = () => {
             <Link 
               to="/about" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/about') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleNavClick('/about');
+              }}
               role="menuitem"
               aria-label="Go to About Us page"
             >
@@ -168,7 +187,10 @@ const Navbar = () => {
             <Link 
               to="/sponsor" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/sponsor') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleNavClick('/sponsor');
+              }}
               role="menuitem"
               aria-label="Go to Sponsor / CRO page"
             >
@@ -177,7 +199,10 @@ const Navbar = () => {
             <Link 
               to="/site" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/site') ? 'bg-[#56F0C8] text-[#0B1220]' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2`}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleNavClick('/site');
+              }}
               role="menuitem"
               aria-label="Go to Sites / Vendors page"
             >
