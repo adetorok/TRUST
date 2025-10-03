@@ -459,14 +459,14 @@ const Home = () => {
                 Please check your email and click the link to access your personalized proposal.
               </p>
             </div>
-          ) : showForm ? (
+          ) : (
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                  {formType === 'sponsor' ? 'Sponsor / CRO Proposal Request' : 'Site / Vendor Proposal Request'}
+                  Request Your Proposal
                 </h3>
                 <p className="text-slate-600">
-                  Tell us about your study and we'll create a customized proposal
+                  Tell us about your organization and we'll create a customized proposal
                 </p>
               </div>
               
@@ -543,6 +543,29 @@ const Home = () => {
                 </div>
                 
                 <div>
+                  <label htmlFor="organizationType" className="block text-sm font-medium text-slate-700 mb-2">
+                    Organization Type
+                  </label>
+                  <select
+                    id="organizationType"
+                    name="organizationType"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                    required
+                  >
+                    <option value="">Select your organization type...</option>
+                    <option value="sponsor">Pharmaceutical Company</option>
+                    <option value="cro">Contract Research Organization (CRO)</option>
+                    <option value="biotech">Biotech Firm</option>
+                    <option value="device">Medical Device Manufacturer</option>
+                    <option value="hospital">Hospital / Medical Center</option>
+                    <option value="research-center">Research Center</option>
+                    <option value="physician-practice">Physician Practice</option>
+                    <option value="site-management">Site Management Organization</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
                   <label htmlFor="studyDetails" className="block text-sm font-medium text-slate-700 mb-2">
                     Study Details (Optional)
                   </label>
@@ -562,26 +585,6 @@ const Home = () => {
                   Request My Proposal
                 </button>
               </form>
-            </div>
-          ) : (
-            <div className="text-center">
-              <p className="text-lg text-slate-600 mb-8">
-                Choose your role to get started with a personalized proposal
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => handleRequestProposalClick('sponsor')}
-                  className="bg-teal-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-teal-700 transition-colors shadow-lg text-lg"
-                >
-                  I'm a Sponsor / CRO
-                </button>
-                <button
-                  onClick={() => handleRequestProposalClick('site')}
-                  className="bg-white text-teal-600 border-2 border-teal-600 font-bold px-8 py-4 rounded-lg hover:bg-teal-50 transition-colors shadow-lg text-lg"
-                >
-                  I'm a Site / Vendor
-                </button>
-              </div>
             </div>
           )}
         </div>

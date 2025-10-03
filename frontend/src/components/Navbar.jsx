@@ -44,21 +44,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-2" role="menubar">
-              <a 
-                href="/#contact" 
-                className="text-slate-600 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactElement = document.getElementById('contact-form-section');
-                  if (contactElement) {
-                    contactElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                role="menuitem"
-                aria-label="Scroll to contact form section"
-              >
-                Our Services
-              </a>
               <Link 
                 to="/" 
                 className={`${getButtonStyles('/')} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
@@ -143,22 +128,6 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden" id="mobile-menu" role="menu" aria-label="Mobile navigation">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-200">
-            <a 
-              href="/#contact" 
-              className="text-slate-600 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-              onClick={(e) => {
-                e.preventDefault();
-                setIsMobileMenuOpen(false);
-                const contactElement = document.getElementById('contact-form-section');
-                if (contactElement) {
-                  contactElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              role="menuitem"
-              aria-label="Scroll to contact form section"
-            >
-              Our Services
-            </a>
             <Link 
               to="/" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/') ? 'bg-teal-100 text-teal-800' : 'text-slate-600 hover:text-slate-900'} focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2`}
