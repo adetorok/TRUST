@@ -60,15 +60,20 @@ const Navbar = () => {
       <header className="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50" role="banner">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Link 
-              to="/" 
-              className="text-xl font-bold text-[#56F0C8] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2 rounded-md px-2 py-1"
-              aria-label="TRUST - Go to homepage"
-            >
-              TRUST
-            </Link>
-          </div>
+                <div className="flex-shrink-0">
+                  <Link 
+                    to="/" 
+                    className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2 rounded-md px-2 py-1"
+                    aria-label="TRUST - Go to homepage"
+                  >
+                    <img 
+                      src="/trust-logo.png" 
+                      alt="TRUST Logo" 
+                      className="h-8 w-8 object-contain"
+                    />
+                    <span className="text-xl font-bold text-[#56F0C8]">TRUST</span>
+                  </Link>
+                </div>
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-2" role="menubar">

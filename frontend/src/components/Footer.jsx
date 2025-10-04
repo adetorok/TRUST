@@ -5,9 +5,16 @@ function Footer() {
     <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Column 1: Contact Info */}
-          <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-white">TRUST</h4>
+                {/* Column 1: Contact Info */}
+                <div className="md:col-span-1">
+                  <div className="flex items-center space-x-2 mb-4">
+                    <img 
+                      src="/trust-logo.png" 
+                      alt="TRUST Logo" 
+                      className="h-8 w-8 object-contain"
+                    />
+                    <h4 className="text-lg font-semibold text-white">TRUST</h4>
+                  </div>
             <p className="text-slate-400 text-sm">
               123 University Heights Dr<br />
               Newark, NJ 07102<br />
