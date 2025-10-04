@@ -35,8 +35,16 @@ const SiteLanding = () => {
         onRoleSelect={handleRoleSelect}
       />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-teal-50 py-20 sm:py-24 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative bg-gradient-to-br from-blue-50 to-teal-50 py-20 sm:py-24 lg:py-32">
+        {/* Logo in top right */}
+        <div className="absolute top-6 right-6 z-20">
+          <img 
+            src="/trust-logo.png" 
+            alt="TRUST Logo" 
+            className="h-16 w-16 object-contain opacity-80"
+          />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
             Site & Vendor Solutions
           </h1>

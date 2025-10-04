@@ -59,7 +59,7 @@ const Navbar = () => {
       />
       <header className="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50" role="banner">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
                 <div className="flex-shrink-0">
                   <Link 
                     to="/" 
@@ -69,9 +69,9 @@ const Navbar = () => {
                     <img 
                       src="/trust-logo.png" 
                       alt="TRUST Logo" 
-                      className="h-8 w-8 object-contain"
+                      className="h-10 w-10 object-contain"
                     />
-                    <span className="text-xl font-bold text-[#56F0C8]">TRUST</span>
+                    <span className="text-2xl font-bold text-[#56F0C8]">TRUST</span>
                   </Link>
                 </div>
           {/* Desktop Navigation */}
