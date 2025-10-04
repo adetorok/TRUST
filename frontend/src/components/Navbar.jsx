@@ -67,9 +67,9 @@ const Navbar = () => {
                     aria-label="TRUST - Go to homepage"
                   >
                     <img 
-                      src="/trust-logo.png" 
+                      src="/trust-logo-new.png" 
                       alt="TRUST Logo" 
-                      className="h-10 w-10 object-contain"
+                      className="h-12 w-16 object-contain"
                     />
                     <span className="text-2xl font-bold text-[#56F0C8]">TRUST</span>
                   </Link>
