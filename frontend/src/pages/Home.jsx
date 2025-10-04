@@ -122,7 +122,7 @@ const Home = () => {
         {/* Logo in top right */}
         <div className="absolute top-6 right-6 z-20">
           <img 
-            src="/trust-logo-new.png" 
+            src="/TRUST/trust-logo-new.png" 
             alt="TRUST Logo" 
             className="h-20 w-24 object-contain opacity-90"
           />
@@ -266,7 +266,7 @@ const Home = () => {
             </div>
             <div className="relative h-80 w-full">
               <img
-                src="/why-trust-works.png"
+                src="/TRUST/why-trust-works.png"
                 alt="Collaborative group discussion showing community engagement and trust"
                 className="rounded-xl shadow-lg object-cover w-full h-full"
               />

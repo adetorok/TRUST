@@ -41,7 +41,7 @@ const About = () => {
         {/* Logo in top right */}
         <div className="absolute top-6 right-6 z-20">
           <img 
-            src="/trust-logo-new.png" 
+            src="/TRUST/trust-logo-new.png" 
             alt="TRUST Logo" 
             className="h-20 w-24 object-contain opacity-90"
           />

@@ -9,7 +9,7 @@ function Footer() {
                 <div className="md:col-span-1">
                   <div className="flex items-center space-x-2 mb-4">
                     <img 
-                      src="/trust-logo-new.png" 
+                      src="/TRUST/trust-logo-new.png" 
                       alt="TRUST Logo" 
                       className="h-10 w-12 object-contain"
                     />
