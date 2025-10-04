@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { auth } from '../middleware/auth.js';
+import { allow } from '../middleware/rbac.js';
+import { createLead, listLeads, moveStage } from '../controllers/lead.controller.js';
+const r = Router();
+r.use(auth);
+r.post('/', allow('pm','coordinator','nurse','site_user','sponsor_user','cro_user'), createLead);
+r.get('/', allow('pm','coordinator','nurse','viewer','site_user','sponsor_user','cro_user'), listLeads);
+r.post('/:id/transition', allow('pm','coordinator','nurse'), moveStage);
+export default r;
