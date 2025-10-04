@@ -1,0 +1,11 @@
+{
+  "name": "trust-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed/seed.js"
+  }
+}
