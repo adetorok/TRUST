@@ -36,6 +36,8 @@ app.use('/api/participants', participantRoutes);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 4000;
-connectDB(process.env.MONGO_URI).then(() => {
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://adetorok:Omoyeni0!@dalento0.ajjfhj5.mongodb.net/trust-clinical-trial';
+
+connectDB(MONGO_URI).then(() => {
   app.listen(PORT, () => console.log(`🚀 TRUST API on http://localhost:${PORT}`));
 });

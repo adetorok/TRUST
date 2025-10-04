@@ -121,6 +121,26 @@ const Navbar = () => {
               >
                 Request Proposal
               </button>
+              
+              {/* Sign In / Sign Up Section */}
+              <div className="ml-4 flex items-center space-x-2 border-l border-gray-300 pl-4">
+                <Link
+                  to="/admin/login"
+                  className="px-3 py-2 text-sm font-medium text-[#10224E] hover:text-[#16B1F0] transition-colors focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2 rounded-md"
+                  role="menuitem"
+                  aria-label="Sign in to admin dashboard"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/admin/login"
+                  className="px-4 py-2 text-sm font-bold text-white bg-[#16B1F0] rounded-md hover:bg-[#10224E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2"
+                  role="menuitem"
+                  aria-label="Sign up for admin access"
+                >
+                  Sign Up
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -225,6 +245,30 @@ const Navbar = () => {
             >
               Request Proposal
             </button>
+            
+            {/* Mobile Sign In / Sign Up Section */}
+            <div className="border-t border-gray-200 pt-3 mt-3">
+              <div className="space-y-2">
+                <Link
+                  to="/admin/login"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-[#10224E] hover:text-[#16B1F0] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  role="menuitem"
+                  aria-label="Sign in to admin dashboard"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/admin/login"
+                  className="block px-3 py-2 rounded-md text-base font-medium bg-[#16B1F0] text-white hover:bg-[#10224E] focus:outline-none focus:ring-2 focus:ring-[#56F0C8] focus:ring-offset-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  role="menuitem"
+                  aria-label="Sign up for admin access"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}
