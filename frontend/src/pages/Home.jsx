@@ -127,26 +127,44 @@ const Home = () => {
             className="h-16 w-16 object-contain opacity-80"
           />
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E8EEFC] leading-tight mb-6">
-            Recruit Qualified Subjects—Fast & Predictable
-          </h1>
-          <p className="text-lg sm:text-xl text-[#A4B0CC] max-w-3xl mx-auto mb-10">
-            TRUST builds a steady pipeline of pre-qualified subjects so your study meets enrollment targets. Our method blends targeted community outreach with nurse-led pre-screening to cut screen-fail rates and keep coordinators focused on visits. (IRB-ready bilingual materials included.)
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="bg-[#56F0C8] text-[#0B1220] px-4 py-2 rounded-full text-sm font-semibold">
-              Enrollment-focused
-            </span>
-            <span className="bg-[#16B1F0] text-white px-4 py-2 rounded-full text-sm font-semibold">
-              Nurse-led pre-screen
-            </span>
-            <span className="bg-[#10224E] text-[#E8EEFC] px-4 py-2 rounded-full text-sm font-semibold">
-              Community Outreach Recruitment
-            </span>
-            <span className="bg-[#56F0C8] text-[#0B1220] px-4 py-2 rounded-full text-sm font-semibold">
-              IRB/ICH-GCP aligned
-            </span>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Main content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E8EEFC] leading-tight mb-6">
+                Recruit Qualified Subjects—Fast & Predictable
+              </h1>
+              <div className="space-y-4 text-lg text-[#A4B0CC]">
+                <div className="flex items-start space-x-3">
+                  <span className="text-[#56F0C8] text-xl mt-1">•</span>
+                  <p>TRUST builds a steady pipeline of pre-qualified subjects so your study meets enrollment targets.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-[#56F0C8] text-xl mt-1">•</span>
+                  <p>Our method blends targeted community outreach with nurse-led pre-screening to cut screen-fail rates and keep coordinators focused on visits.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="text-[#56F0C8] text-xl mt-1">•</span>
+                  <p>IRB-ready bilingual materials included.</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side - Badges */}
+            <div className="flex flex-col space-y-4">
+              <span className="bg-[#56F0C8] text-[#0B1220] px-6 py-3 rounded-full text-sm font-semibold text-center">
+                Enrollment-focused
+              </span>
+              <span className="bg-[#16B1F0] text-white px-6 py-3 rounded-full text-sm font-semibold text-center">
+                Nurse-led pre-screen
+              </span>
+              <span className="bg-[#10224E] text-[#E8EEFC] px-6 py-3 rounded-full text-sm font-semibold text-center">
+                Community Outreach Recruitment
+              </span>
+              <span className="bg-[#56F0C8] text-[#0B1220] px-6 py-3 rounded-full text-sm font-semibold text-center">
+                IRB/ICH-GCP aligned
+              </span>
+            </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
