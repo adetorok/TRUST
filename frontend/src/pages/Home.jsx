@@ -142,7 +142,7 @@ const Home = () => {
               Nurse-led pre-screen
             </span>
             <span className="bg-[#10224E] text-[#E8EEFC] px-4 py-2 rounded-full text-sm font-semibold">
-              EN/ES
+              Community Outreach Recruitment
             </span>
             <span className="bg-[#56F0C8] text-[#0B1220] px-4 py-2 rounded-full text-sm font-semibold">
               IRB/ICH-GCP aligned
