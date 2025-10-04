@@ -266,13 +266,13 @@ const Home = () => {
             </div>
             <div className="relative h-80 w-full">
               <img
-                src="https://via.placeholder.com/600x400" // Placeholder image
-                alt="Why TRUST Works"
+                src="/why-trust-works.png"
+                alt="Collaborative group discussion showing community engagement and trust"
                 className="rounded-xl shadow-lg object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent rounded-xl flex items-end p-6">
                 <p className="text-white text-xl font-semibold">
-                  Proven methodology for enrollment success.
+                  Community collaboration drives enrollment success.
                 </p>
               </div>
             </div>
